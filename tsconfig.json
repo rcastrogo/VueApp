@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
+    "target": "ES5",
+    "module": "ES2015",
+    "strict": false,
     "jsx": "preserve",
     "importHelpers": true,
+    "declaration": false,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
@@ -20,7 +21,7 @@
       ]
     },
     "lib": [
-      "esnext",
+      "es2017",
       "dom",
       "dom.iterable",
       "scripthost"
