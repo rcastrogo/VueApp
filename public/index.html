@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <base href="/<%= process.env.NODE_ENV === 'production' ? '/vueapp' : '' %>">
+    <base href="/<%= (process.env.NODE_ENV === 'production' ? '/vueapp' : '') %>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
@@ -20,7 +20,6 @@
       .rpt-footer{ background-color:white; padding:2px; margin:0; margin-top:2px; border-top:solid 1px gray; text-align:right; font-weight:bold;}
       .rpt-total { background-color:whitesmoke; padding:2px; margin:0; margin-top:5px; border-top:solid 1px gray; font-weight:bold; font-size:150%; }
 
-      pre{ width: max-content ;}
       
       @media only screen and (max-width: 360px) {
         body{ font-size:13px;}
@@ -29,6 +28,21 @@
         #botonera .w3-button{ padding:8px 10px }
         #table-tbl-rpt0001{font-size:90%;}
       }
+
+      code, pre {
+	    color: white;
+	    text-shadow: 0 -.1em .2em black;
+	    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	    direction: ltr;
+	    text-align: left;
+	    white-space: pre;
+	    word-spacing: normal;
+	    word-break: normal;
+	    word-wrap: normal;
+	    line-height: 1.5;
+	    tab-size: 2;
+	    hyphens: none;
+    }
 
     </style>
   </head>
@@ -66,9 +80,6 @@
 
       </div>
     </div>
-
-
-
     
   </body>
 

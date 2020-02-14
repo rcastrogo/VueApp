@@ -27,28 +27,27 @@
             <div id="progress-bar" class="w3-container w3-green w3-center w3-round" style="width:0"></div>
           </div>
         </div>
-        <div id="table-container" class="w3-container w3-margin-bottom"></div>
+        <div id="table-container" class="w3-container w3-margin-bottom" style="overflow:auto;max-height:25em"></div>
       </div>
 
       <div id="tab-report-txt" class="w3-container w3-border tab" style="display:none">
         <p></p>
-        <div class="w3-container w3-round w3-border" style="max-height: 30em; overflow:auto">
-          <pre class="w3-black w3-round w3-padding">{{reportFile}}</pre>
+        <div class="w3-container w3-round w3-border" >
+          <pre class="w3-black w3-round w3-padding" style="overflow:auto;max-height:25em"><code>{{reportFile}}</code></pre>
         </div>
       </div>
 
       <div id="tab-report-data" class="w3-container w3-border tab" style="display:none">
         <p></p>
-        <div class="w3-container w3-round w3-border" style="max-height: 30em; overflow:scroll">
-          <pre class="w3-black w3-round w3-padding" style="overflow:visible">{{reportData}}</pre>
+        <div class="w3-container w3-round w3-border">
+          <pre class="w3-black w3-round w3-padding" style="overflow:auto;max-height:25em"><code>{{reportData}}</code></pre>
         </div>
       </div>
 
       <div id="tab-report-log" class="w3-container w3-border tab">
         <p></p>
-        <div class="w3-container w3-margin-bottom">
-          <div id="rowsContainer">
-          </div>
+        <div class="w3-container w3-round w3-border w3-margin-bottom">
+          <pre id="rowsContainer" class="w3-black w3-round w3-padding" style="overflow:auto;max-height:25em"><code>{{reportData}}</code></pre>
         </div>
       </div>
 
@@ -168,7 +167,9 @@
               this._rptService
                   .fromReportDefinition(rd, data, (html: string) => {       
                 __container.innerHTML = html;
-                __rowsContainer.innerHTML = ''
+                if(rd.context.onEndfn) rd.context.onEndfn({ data      : data,
+                                                            container : __rowsContainer,
+                                                            utils     : utils });
               });
             })
           })
