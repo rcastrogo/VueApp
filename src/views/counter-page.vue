@@ -1,5 +1,5 @@
 <template>
-  <div class="w3-container w3-margin-bottom">
+  <div class="w3-container w3-margin-bottom w3-center">
     <h1>Contador</h1>
     <div class="w3-card-4 w3-center" style="width:45%; margin:0 auto;">
       <img src="https://www.w3schools.com/w3css/img_snowtops.jpg" alt="Alps" style="width:100%">

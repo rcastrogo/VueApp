@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\public",
+    "\\public\\assets",
+    "\\public\\assets\\tabbly-reports",
+    "\\public\\assets\\web-worker-reports",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components",
+    "\\src\\models",
+    "\\src\\views"
+  ],
+  "SelectedNode": "\\public\\index.html",
+  "PreviewInSolutionExplorer": false
+}

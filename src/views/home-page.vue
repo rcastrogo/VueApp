@@ -1,5 +1,5 @@
 <template>
-  <div class="w3-container w3-margin-bottom">
+  <div class="w3-container w3-margin-bottom w3-center">
     <h1>Página principal</h1>
     <p>Bienvenido a la página principal de Vue App!!!</p>
     <p class="w3-container w3-center">

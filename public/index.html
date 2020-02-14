@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -8,6 +8,28 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style type="text/css">
+
+      tr th.sorteable{cursor:pointer; }
+
+      .rpt-report-header{ font-size:300%; font-weight:bold; text-align:center; padding:15px 0; border:solid 1px silver; border-radius:10px; margin:5px; }  
+      .rpt-report-header-sub { border-bottom:solid 1px silver; text-align:right; padding:5px;}
+      .rpt-header{ background-color:white; padding:2px; margin:0; margin-bottom:2px; border-bottom:solid 1px gray;}
+      .rpt-detail{ background-color:white; padding:2px; margin:0; margin-top:5px; border-bottom:solid 1px gray;}
+      .rpt-footer{ background-color:white; padding:2px; margin:0; margin-top:2px; border-top:solid 1px gray; text-align:right; font-weight:bold;}
+      .rpt-total { background-color:whitesmoke; padding:2px; margin:0; margin-top:5px; border-top:solid 1px gray; font-weight:bold; font-size:150%; }
+
+      pre{ width: max-content ;}
+      
+      @media only screen and (max-width: 360px) {
+        body{ font-size:13px;}
+        .w3-container, .w3-panel{ padding:4px; }
+        #botonera{font-size:12px; text-align:center }
+        #botonera .w3-button{ padding:8px 10px }
+        #table-tbl-rpt0001{font-size:90%;}
+      }
+
+    </style>
   </head>
   
   <body>
@@ -37,7 +59,7 @@
         <div class="js-content w3-container w3-border-top w3-padding-16">
         </div>
 
-        <div class="w3-container w3-border-top w3-center w3-light-grey" style="padding:8px">
+        <div class="w3-container w3-border-top w3-center w3-light-grey" style="padding: 8px ">
           <button type="button" class="js-accept-button w3-button w3-white w3-border">Aceptar</button>      
         </div>
 
