@@ -12,8 +12,9 @@
   @Component
   export default class AboutPage extends Vue {
 
-
   }
+
+
 </script>
 
 <style>

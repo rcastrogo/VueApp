@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docs",
-    "\\public",
+    "\\public\\assets",
+    "\\public\\assets\\web-worker-reports",
     "\\src",
-    "\\src\\assets",
     "\\src\\components",
+    "\\src\\extensions",
     "\\src\\models",
     "\\src\\services",
     "\\src\\services\\api",
     "\\src\\views"
   ],
-  "SelectedNode": "\\src\\views\\vehiculo-page.vue",
+  "SelectedNode": "\\src\\views\\counter-page.vue",
   "PreviewInSolutionExplorer": false
 }
