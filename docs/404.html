@@ -1,106 +1,33 @@
-﻿<!DOCTYPE html>
-<html lang=es>
-<head>
-    <meta charset=utf-8>
-    <base href="/vueapp/">
-    <meta http-equiv=X-UA-Compatible content="IE=edge">
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <link rel=icon href=favicon.ico>
-    <title>vue-app</title>
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
-    <link rel=stylesheet href=https://www.w3schools.com/w3css/4/w3.css>
-    <style type=text/css>
-        tr th.sorteable {
-            cursor: pointer;
-        }
+﻿<!DOCTYPE html><html lang=en><head><meta charset=utf-8><base href=/vueapp/><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=favicon.ico><title>vue-app</title><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=https://www.w3schools.com/w3css/4/w3.css><style type=text/css>tr th.sorteable{cursor:pointer; }
 
-        .rpt-report-header {
-            font-size: 300%;
-            font-weight: bold;
-            text-align: center;
-            padding: 15px 0;
-            border: solid 1px silver;
-            border-radius: 10px;
-            margin: 5px;
-        }
+      .rpt-report-header{ font-size:300%; font-weight:bold; text-align:center; padding:15px 0; border:solid 1px silver; border-radius:10px; margin:5px; }  
+      .rpt-report-header-sub { border-bottom:solid 1px silver; text-align:right; padding:5px;}
+      .rpt-header{ background-color:white; padding:2px; margin:0; margin-bottom:2px; border-bottom:solid 1px gray;}
+      .rpt-detail{ background-color:white; padding:2px; margin:0; margin-top:5px; border-bottom:solid 1px gray;}
+      .rpt-footer{ background-color:white; padding:2px; margin:0; margin-top:2px; border-top:solid 1px gray; text-align:right; font-weight:bold;}
+      .rpt-total { background-color:whitesmoke; padding:2px; margin:0; margin-top:5px; border-top:solid 1px gray; font-weight:bold; font-size:150%; }
 
-        .rpt-report-header-sub {
-            border-bottom: solid 1px silver;
-            text-align: right;
-            padding: 5px;
-        }
+      
+      @media only screen and (max-width: 360px) {
+        body{ font-size:13px;}
+        .w3-container, .w3-panel{ padding:4px; }
+        #botonera{font-size:12px; text-align:center }
+        #botonera .w3-button{ padding:8px 10px }
+        #table-tbl-rpt0001{font-size:90%;}
 
-        .rpt-header {
-            background-color: white;
-            padding: 2px;
-            margin: 0;
-            margin-bottom: 2px;
-            border-bottom: solid 1px gray;
-        }
+      }
 
-        .rpt-detail {
-            background-color: white;
-            padding: 2px;
-            margin: 0;
-            margin-top: 5px;
-            border-bottom: solid 1px gray;
-        }
-
-        .rpt-footer {
-            background-color: white;
-            padding: 2px;
-            margin: 0;
-            margin-top: 2px;
-            border-top: solid 1px gray;
-            text-align: right;
-            font-weight: bold;
-        }
-
-        .rpt-total {
-            background-color: whitesmoke;
-            padding: 2px;
-            margin: 0;
-            margin-top: 5px;
-            border-top: solid 1px gray;
-            font-weight: bold;
-            font-size: 150%;
-        }
-
-        pre {
-            width: max-content;
-        }
-
-        @media only screen and (max-width: 360px) {
-            body {
-                font-size: 13px;
-            }
-
-            .w3-container, .w3-panel {
-                padding: 4px;
-            }
-
-            #botonera {
-                font-size: 12px;
-                text-align: center
-            }
-
-                #botonera .w3-button {
-                    padding: 8px 10px
-                }
-
-            #table-tbl-rpt0001 {
-                font-size: 90%;
-            }
-        }
-    </style>
-    <link href=css/app.a1c695e8.css rel=preload as=script>
-    <link href=js/app.5a52c00b.js rel=preload as=script>
-    <link href=js/chunk-vendors.b1d11e60.js rel=preload as=script>
-    <link href=css/app.a1c695e8.css rel=stylesheet>
-</head>
-<body>
-    <div class="w3-container w3-teal"><h1>Vue App</h1></div><div id=app></div><div class="w3-container w3-teal w3-center"><footer><p>&copy; All rights reserved for <i>Vue App</i> 2020</p></footer></div><div id=dialog-container class=w3-modal><div class="w3-modal-content w3-card-4 w3-animate-zoom" style=max-width:400px><div class=w3-container style=padding:0px><span class="js-title w3-large w3-left" style=padding:6px></span> <span class="js-close-button w3-button fa fa-times w3-xlarge w3-hover-red w3-right" title=Cerrar></span></div><div class="js-content w3-container w3-border-top w3-padding-16"></div><div class="w3-container w3-border-top w3-center w3-light-grey" style="padding: 8px"><button type=button class="js-accept-button w3-button w3-white w3-border">Aceptar</button></div></div></div>
-    <script src=js/chunk-vendors.b1d11e60.js></script>
-    <script src=js/app.5a52c00b.js></script>
-</body>
-</html>
+      code, pre {
+	    color: white;
+	    text-shadow: 0 -.1em .2em black;
+	    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	    direction: ltr;
+	    text-align: left;
+	    white-space: pre;
+	    word-spacing: normal;
+	    word-break: normal;
+	    word-wrap: normal;
+	    line-height: 1.5;
+	    tab-size: 2;
+	    hyphens: none;
+    }</style><link href=css/app.09470343.css rel=preload as=script><link href=js/app.ba5b0aba.js rel=preload as=script><link href=js/chunk-vendors.29bb5e53.js rel=preload as=script><link href=css/app.09470343.css rel=stylesheet></head><body><div class="w3-container w3-teal"><h1>Vue App</h1></div><div id=app></div><div class="w3-container w3-teal w3-center"><footer><p>&copy; All rights reserved for <i>Vue App</i> 2020</p></footer></div><div id=dialog-container class=w3-modal><div class="w3-modal-content w3-card-4 w3-animate-zoom" style=max-width:400px><div class=w3-container style=padding:0px><span class="js-title w3-large w3-left" style=padding:6px></span> <span class="js-close-button w3-button fa fa-times w3-xlarge w3-hover-red w3-right" title=Cerrar></span></div><div class="js-content w3-container w3-border-top w3-padding-16"></div><div class="w3-container w3-border-top w3-center w3-light-grey" style="padding: 8px"><button type=button class="js-accept-button w3-button w3-white w3-border">Aceptar</button></div></div></div><script src=js/chunk-vendors.29bb5e53.js></script><script src=js/app.ba5b0aba.js></script></body></html>
