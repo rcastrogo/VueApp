@@ -237,7 +237,7 @@
       this.syncDataBind();
 
       new DialogHelper().getDialogWrapper('dialog-container')        
-                        .setTitle('Edición de poarámetros')
+                        .setTitle('Edición de parámetros')
                         .setBody(this._dialog)
                         .disableClickOutside()
                         .onInit( dlg => {                          
