@@ -35,7 +35,8 @@ export default class HelloWorld extends Vue {
     this.menuItems = [ 
       { route: "/usuarios",    name : "Usuarios"} ,
       { route: "/proveedores", name : "proveedores"},
-      { route: "/vehiculos",   name : "Vehículos" }
+      { route: "/vehiculos",   name : "Vehículos" },
+      { route: "/parametros",   name : "Configuración" }
     ];
   }
 

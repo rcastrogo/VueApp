@@ -86,6 +86,7 @@
       this._vehiculoApiService = new VehiculoService();
       this._rptService = new TabblyService();
       this.initWorker();
+      this.listVehiculos();
     }
 
     public listUsuarios() {

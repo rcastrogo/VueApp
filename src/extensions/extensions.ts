@@ -315,12 +315,17 @@ export class DialogHelper {
 
   public getDialogWrapper(id: string) : any {
     let __container = document.getElementById(id);
+    let __onInit: (dlg:any) => any;
     let __dlg = { container   : __container,
                   title       : __container.querySelector('.js-title'),
                   body        : __container.querySelector('.js-content'),
                   closeButton : <HTMLButtonElement>__container.querySelector('.js-close-button'),
                   acceptButton: <HTMLButtonElement>__container.querySelector('.js-accept-button'),
-                  close : function(){ __container.style.display = 'none'; },
+                  close  : function(){ __container.style.display = 'none'; },
+                  onInit : function(onInit: (dlg:any) => any ){
+                    __onInit = onInit;
+                    return __dlg;
+                  },
                   show  : function(onConfirm?: (dlg:any) => any){
                     if (onConfirm) {
                       __dlg.acceptButton.onclick = () => {
@@ -328,6 +333,8 @@ export class DialogHelper {
                       };
                     }
                     __container.style.display = 'block';
+                    if(__onInit) __onInit(__dlg);
+                    return __dlg;
                   },
                   setTitle: (title:string) => {
                     __dlg.title.innerHTML = title;

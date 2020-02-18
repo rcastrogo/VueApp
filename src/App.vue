@@ -2,7 +2,7 @@
 
 <template>
   <div id="app">
-    <menu-component/>
+    <menu-component />
     <router-view></router-view>
   </div>
 </template>

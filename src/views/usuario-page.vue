@@ -210,7 +210,7 @@
     private _dialog: HTMLElement;
     private insert() {
 
-      this._dialog = this._dialog || <HTMLInputElement>utils.$('proveedor-edit-dialog');
+      this._dialog = this._dialog || <HTMLInputElement>utils.$('usuario-edit-dialog');
       this.current = { _id: 0, _nif: '', _nombre: '', _descripcion: '', _fechaDeAlta: '' };
       this.syncDataBind();
 

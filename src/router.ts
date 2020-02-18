@@ -8,6 +8,7 @@ import TabllyReportsPage from '@/views/tabbly-report-page.vue';
 import UsuarioPage from '@/views/usuario-page.vue';
 import ProveedorPage from '@/views/proveedor-page.vue';
 import VehiculoPage from '@/views/vehiculo-page.vue';
+import ParametroPage from '@/views/parametro-page.vue';
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false
@@ -19,7 +20,8 @@ const routes =  [
     { path: '/tabbly-reports', component: TabllyReportsPage },
     { path: '/usuarios', component: UsuarioPage },
     { path: '/proveedores', component: ProveedorPage },
-    { path: '/vehiculos', component: VehiculoPage }
+    { path: '/vehiculos', component: VehiculoPage },
+    { path: '/parametros', component: ParametroPage }
 ];
 
 const router = new VueRouter({mode: 'history', routes});
